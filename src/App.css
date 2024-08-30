@@ -1,42 +1,42 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.app {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.selection-section {
+  flex: 1;
+  margin-right: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .card {
-  padding: 2em;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex: 1 1 30%;
 }
 
-.read-the-docs {
-  color: #888;
+.card.selected {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #a89999;
+  margin-bottom: 10px;
+}
+
+.summary-section {
+  flex: 0 0 300px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  
 }
